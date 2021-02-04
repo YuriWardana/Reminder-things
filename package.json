@@ -1,0 +1,25 @@
+{
+  "name": "Reminder-things",
+  "version": "1.0.0",
+  "description": "learning how to use API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuriWardana/Reminder-things.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuriWardana/Reminder-things/issues"
+  },
+  "homepage": "https://github.com/YuriWardana/Reminder-things#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0"
+  }
+}
