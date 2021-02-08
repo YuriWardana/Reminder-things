@@ -21,8 +21,11 @@
     "express": "^4.17.1",
     "pg": "^8.5.1",
     "sequelize": "^6.5.0"
+<<<<<<< HEAD
   },
   "devDependencies": {
     "sequelize-cli": "^6.2.0"
+=======
+>>>>>>> 61f2dc51ff59386ce48b4e3ff6ff70d930f24bde
   }
 }

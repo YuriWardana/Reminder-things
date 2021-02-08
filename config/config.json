@@ -1,10 +1,18 @@
 {
   "development": {
+<<<<<<< HEAD
     "username": "root",
     "password": null,
     "database": "database_development",
     "host": "127.0.0.1",
     "dialect": "mysql"
+=======
+    "username": "postgres",
+    "password": "postgres",
+    "database": "db_Reminder",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+>>>>>>> 61f2dc51ff59386ce48b4e3ff6ff70d930f24bde
   },
   "test": {
     "username": "root",
