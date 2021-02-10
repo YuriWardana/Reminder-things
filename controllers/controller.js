@@ -30,8 +30,9 @@ class Controller{
 
     static delete(req,res){
         let id = +req.params.id
+        console.log(id);
         Reminder.destroy({where:{
-            id:id
+            id
         }})
         return Reminder.findAll()
         .then(data=>{

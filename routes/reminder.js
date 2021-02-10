@@ -4,7 +4,7 @@ const Controller = require ('../controllers/controller')
 
 router.get('/list', Controller.findAll)
 router.post('/postAdd',Controller.postAdd)
-router.get('/delete', Controller.delete)
+router.delete('/delete/:id', Controller.delete)
 
 module.exports = router 
  
