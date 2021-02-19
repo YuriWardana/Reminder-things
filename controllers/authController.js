@@ -1,5 +1,6 @@
 const { User } = require('../models/index');
 const { comparePassword } = require('../helper/bcrypt')
+const { generateToken } = require('../helper/jwt')
 
 class authController{
 
@@ -51,7 +52,14 @@ class authController{
             if (!status) {
                 return res.status(401).json({msg:'user/password not match'})   
             }
-            res.status(200).json(data)
+            const payload = {
+                id: data.id,
+                User_name : data.User_name,
+                email : data.email
+            }
+
+            const jwt = generateToken(payload)
+            res.status(200).json({ jwt })
         })
         .catch(err=>{
             res.status(400).json(err)
