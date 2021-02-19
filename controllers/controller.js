@@ -5,7 +5,7 @@ class Controller{
     static findAll(req,res){
         Reminder.findAll()
         .then(data=>{
-        res.send(data) 
+        res.status(200).json(data) 
         })
      .catch(err=>{
         res.send(err)
@@ -21,7 +21,12 @@ class Controller{
         }
         Reminder.create(newData)
         .then(data=>{
-            res.send(data);
+            newData = {
+               title: data.title,
+               detail: data.detail,
+               status:data.status
+            }
+            res.status(201).json(newData);
         })
         .catch(err=>{
             res.send(err)
@@ -30,18 +35,33 @@ class Controller{
 
     static delete(req,res){
         let id = +req.params.id
-        console.log(id);
+        // console.log(id);
         Reminder.destroy({where:{
             id
         }})
-        return Reminder.findAll()
         .then(data=>{
-            res.send(data);
+            if (data === 1) {
+               return res.status(200).json({message: 'success delete data'});    
+            } else if(data === 0) {
+              return res.status(404).json({message:'data not found'})
+            }
         })
         .catch(err=>{
             res.send(err)
         })
     } 
+
+    static findOne(req,res){
+        let id = +req.params.id
+        // console.log(id);
+        Reminder.findAll({where:{id:id}})
+        .then(data=>{
+            res.status(200).json(data)
+        })
+        .catch(err=>{
+            res.send('error')
+        })
+    }
 
 }
  
