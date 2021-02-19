@@ -1,2 +1,2 @@
 # Reminder-things
-learning how to use API
+learn hot to create API, Authentication and JWT
