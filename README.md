@@ -1,2 +1,4 @@
 # Reminder-things
-learn hot to create API, Authentication and JWT
+learn how to create  rest API, Authentication and JWT, using postman (backEnd things)
+-unfinished yet
+
